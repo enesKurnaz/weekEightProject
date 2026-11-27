@@ -48,6 +48,6 @@ describe("Teknolojik Yemekler - Pizza Sipariş Akışı", () => {
     // Gönder butonu aktif olmalı ve tıklanınca /success açılmalı
     cy.get('[data-cy="submit-order"]').should("not.be.disabled").click();
     cy.url({ timeout: 10000 }).should("include", "/success");
-    cy.contains("SİPARİŞİNİZ ALINDI!").should("be.visible");
+    cy.contains("SİPARİŞ ALINDI").should("be.visible");
   });
 });
